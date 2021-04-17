@@ -4,6 +4,9 @@
   "description": "This is Getir's Assignement project",
   "scripts": {
     "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start:dev": "ts-node src/bin/server.ts",
+    "start": "npm run build && node dist/bin/server.js",
     "test": "jest",
     "test:watch": "jest --watch"
   },
