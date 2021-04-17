@@ -1,7 +1,12 @@
 import { Application, Router } from 'express';
+import DataParserService from '../services/DataParser.service';
 import IndexRoute from './index.route';
 
-const _routes: [string, Router][] = [['/', new IndexRoute().routes()]];
+const dataParserService = new DataParserService();
+
+const _routes: [string, Router][] = [
+  ['/', new IndexRoute(dataParserService).routes()],
+];
 
 export const routes = (app: Application) => {
   _routes.forEach((route) => {
