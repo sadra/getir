@@ -1,4 +1,4 @@
-import MemoryDatabaseServer from '../utils/db.handler';
+import MemoryDatabaseServer from './db.handler';
 import {
   connectDB,
   truncate,
@@ -17,7 +17,9 @@ export const dbRunner = () => {
 
     //Connect Db to MongoInMemory
     await connectDB();
+  });
 
+  beforeEach(async () => {
     //Init dummy data
     await mongoose.connection.collection('records').insertMany(fixtures());
   });
