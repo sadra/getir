@@ -22,7 +22,7 @@ export const connectDB = async () => {
 
     await connect(getDBUri()!!, options);
 
-    if (process.env.NODE_ENV === 'test')
+    if (process.env.NODE_ENV !== 'test')
       console.log('📦[Database]: MongoDB is connected.');
   } catch (err) {
     console.error(err.message);
