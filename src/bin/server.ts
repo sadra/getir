@@ -1,5 +1,5 @@
 import { app } from './app';
-import connectDB from '../repositories/database.handler';
+import { connectDB } from '../repositories/database.handler';
 require('dotenv').config();
 
 const PORT = process.env.PORT || 8000;
