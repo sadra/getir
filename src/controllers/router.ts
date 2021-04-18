@@ -1,11 +1,12 @@
 import { Application, Router } from 'express';
-import DataParserService from '../services/DataParser.service';
+import RecordRepository from '../repositories/Record.repository';
+import RecordService from '../services/Record.service';
 import IndexRoute from './index.route';
 
-const dataParserService = new DataParserService();
+const recordService = new RecordService(new RecordRepository());
 
 const _routes: [string, Router][] = [
-  ['/', new IndexRoute(dataParserService).routes()],
+  ['/', new IndexRoute(recordService).routes()],
 ];
 
 export const routes = (app: Application) => {
