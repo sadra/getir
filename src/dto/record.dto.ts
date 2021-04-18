@@ -1,5 +1,5 @@
 export interface RecordDto {
   key: String;
-  createdAt: String;
+  createdAt: Date;
   totalCount: number;
 }

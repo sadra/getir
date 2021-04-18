@@ -1,6 +1,6 @@
 export interface RecordsQueryDto {
-  startDate: String;
-  endDate: String;
-  minCount: Number;
-  maxCount: Number;
+  startDate: Date;
+  endDate: Date;
+  minCount: number;
+  maxCount: number;
 }
