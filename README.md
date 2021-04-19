@@ -2,18 +2,15 @@
 
 This a Node.js project, developed by Typescript.
 
-<!-- TOC -->
-
 - [Getir Assessement Test](#getir-assessement-test)
   - [How to Run](#how-to-run)
+  - [How to Run With Docker](#how-to-run-with-docker)
   - [Run Test](#run-test)
   - [API](#api)
     - [Test /](#test-)
     - [Get Records based on Query](#get-records-based-on-query)
       - [Bad Request Exception](#bad-request-exception)
       - [Not Found Exception](#not-found-exception)
-
-<!-- /TOC -->
 
 ## How to Run
 
@@ -40,6 +37,14 @@ npm run start:dev
 
 ```bash
 npm run start
+```
+
+## How to Run With Docker
+
+If you like to run the project with Docker, just run `docker-compose` with envs:
+
+```bash
+PORT=8000 MONGO_URL='mongodb+srv://test:test@example.mongodb.net/test?retryWrites=true' docker-compose up -d
 ```
 
 ## Run Test
