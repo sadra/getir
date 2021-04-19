@@ -2,6 +2,9 @@
   "name": "geitr",
   "version": "1.0.0",
   "description": "This is Getir's Assignement project",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -10,7 +13,17 @@
     "test": "ENV=test jest",
     "test:watch": "ENV=test jest --watch"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "express",
+    "Mongo",
+    "TypeScript",
+    "heroku"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sadra/getir"
+  },
   "author": "Sadra Isapanah Amlashi",
   "license": "ISC",
   "devDependencies": {
