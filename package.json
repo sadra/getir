@@ -7,6 +7,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "postinstall": "npm run build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start:dev": "ts-node src/bin/server.ts",
     "start": "npm run build && node dist/bin/server.js",
