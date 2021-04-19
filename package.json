@@ -9,7 +9,7 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start:dev": "ts-node src/bin/server.ts",
-    "start": "node dist/bin/server.js",
+    "start:prod": "npm run build && node dist/bin/server.js",
     "test": "ENV=test jest",
     "test:watch": "ENV=test jest --watch"
   },

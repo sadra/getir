@@ -12,4 +12,4 @@ COPY . .
 
 ENV NODE_ENV production
 
-ENTRYPOINT [ "npm", "start" ]
+CMD npm run start:prod
